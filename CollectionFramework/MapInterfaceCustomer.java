@@ -1,3 +1,5 @@
+// Create a class Customer(Account_no Integer, Name Sting), Create a HashMap of type Customer put elements, print elements, check if element with account number 101 is present or not? What is the value for Customer 101.
+
 package com.prac1;
 
 import java.util.*;
