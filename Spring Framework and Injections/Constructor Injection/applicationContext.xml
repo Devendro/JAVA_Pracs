@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the Shape bean -->
+    <bean id="shape" class="com.springHello.Shape">
+        <constructor-arg value="Rectangle"/>
+    </bean>
+
+    <!-- Define the Rectangle bean with constructor injection of the Shape bean -->
+    <bean id="rectangle" class="com.springHello.Rectangle">
+        <constructor-arg value="5"/> <!-- width -->
+        <constructor-arg value="3"/> <!-- height -->
+        <constructor-arg ref="shape"/> <!-- shape reference -->
+    </bean>
+</beans>

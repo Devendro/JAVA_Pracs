@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the Address bean -->
+    <bean id="address" class="com.springHello.Address">
+        <property name="street" value="123 Main St"/>
+        <property name="city" value="Springfield"/>
+        <property name="state" value="IL"/>
+        <property name="zipCode" value="12345"/>
+    </bean>
+
+    <!-- Define the Student bean with setter injection of the Address bean -->
+    <bean id="student" class="com.springHello.Student">
+        <property name="id" value="1"/>
+        <property name="name" value="John"/>
+        <property name="address" ref="address"/>
+    </bean>
+</beans>
