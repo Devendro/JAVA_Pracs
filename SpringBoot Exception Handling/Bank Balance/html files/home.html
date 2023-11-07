@@ -1,0 +1,17 @@
+<!-- src/main/resource/template -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Welcome to Bank</title>
+</head>
+<body>
+	<h2>Welcome to Bank</h2>
+	<p>Account Holder : <span th:text="${name}"></span></p>
+	<p>Account Balance : <span th:text="${amount}"></span></p>
+	<a href="/withdraw">Withdraw</a>
+	<br>
+	<br>
+	<a href="/deposit">Deposit</a>
+</body>
+</html>
